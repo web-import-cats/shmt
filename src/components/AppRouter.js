@@ -1,15 +1,25 @@
-import React from 'react';
-import {Switch, Route, Redirect} from 'react-router-dom';
+import React, {Component} from 'react';
+import {Switch, BrowserRouter, Route, Link, Redirect} from 'react-router-dom';
 import {authRoutes} from "../routes";
+import {publicRoutes} from "../routes";
+import {SHOP_ROUTE} from "../utils/consts";
 import {map} from "react-bootstrap/ElementChildren";
 
 const AppRouter = () => {
-    return (
-        <Switch>
-            {
+    const isAuth = false;
 
-            }
-        </Switch>
+    return (
+        <BrowserRouter>
+            <Switch>
+                {isAuth && authRoutes.map(({path, Component}) =>
+                    <Route key={path} path={path} component={Component} exact/>
+                )}
+                {publicRoutes.map(({path, Component}) =>
+                    <Route key={path} path={path} component={Component} exact/>
+                )}
+                <Redirect to={SHOP_ROUTE} />
+            </Switch>
+        </BrowserRouter>
     );
 };
 
