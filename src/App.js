@@ -2,6 +2,7 @@ import React, {createContext} from "react";
 import {BrowserRouter} from "react-router-dom";
 import AppRouter from "./components/AppRouter";
 import NavBar from "./components/NavBar";
+import './style/main.scss';
 
 function App() {
     return (
