@@ -92,23 +92,6 @@
         transition: background 0.3s linear;
       }
 
-      .menu-item-1, .menu-item-2, .menu-item-3{
-        @include cera-pro (19px, 400, center, #111111);
-        text-decoration: none;
-        position: relative;
-
-        &:after{
-          @include hoverLink;
-        }
-
-        &:hover{
-          &:after{
-            opacity: 0.7;
-            transition: opacity 0.3s linear;
-          }
-        }
-      }
-
       .menu-item-1:after{
         background-color: $light-purple;
       }
