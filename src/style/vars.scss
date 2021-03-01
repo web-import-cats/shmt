@@ -1,0 +1,28 @@
+$light-purple: #E4C9F5;
+$light-pink: #FFD0E3;
+$dark-pink: #E9ABC4;
+
+@mixin cera-pro ($font-size:18px, $font-weight:400, $text-align:center, $black-color: #111111 ){
+  font-size: $font-size;
+  font-weight: $font-weight;
+  text-align: $text-align;
+  color: $black-color;
+
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+@mixin hoverLink {
+  width: 100%;
+  content: '';
+  height: 7px;
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 65%;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  text-align: center;
+  transition: opacity 0.3s linear;
+}

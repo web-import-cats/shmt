@@ -1,7 +1,11 @@
 @import 'fonts';
+@import 'vars';
 @import 'navbar';
 
+li{
+    list-style: none;
+}
+
 body {
-    background-color: pink;
-    background-image: url('../img/vue.jpg');
+    background-color: #e2e2e2;
 }

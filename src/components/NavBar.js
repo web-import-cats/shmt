@@ -1,43 +1,47 @@
 import React, {useContext} from 'react';
 import { createBrowserHistory } from 'history';
 import {Context} from "../index";
-import {Button, Container, Nav, Navbar, NavLink} from "react-bootstrap";
-import {ADMIN_ROUTE, LOGIN_ROUTE, SHOP_ROUTE} from "../utils/consts";
-import vue from '../img/vue.jpg'
+import {Col, Row, Container, Nav, Navbar, NavLink} from "react-bootstrap";
+import {SHOP_ROUTE} from "../utils/consts";
+import logo from '../img/logo.jpg'
 let history = createBrowserHistory();
 
 const NavBar = () => {
     const {user} = useContext(Context)
     return (
-        <Navbar bg="dark" variant="dark">
-            <img src={vue}></img>
+        <Navbar bg="white" className="header-nav-inner" fixed="top">
             <Container>
-                <NavLink style={{color:'white'}} to={SHOP_ROUTE}>
-                    КупиДевайс
-                </NavLink>
-                {user.isAuth ?
-                    <Nav className="ml-auto" style={{color: 'white'}}>
-                        <Button
-                            variant={"outline-light"}
-                            onClick={() => history.push(ADMIN_ROUTE)}
-                        >
-                            Админ панель
-                        </Button>
-                        <Button
-                            variant={"outline-light"}
-                            onClick={() => /*logOut()*/{}}
-                            className="ml-2"
-                        >
-                            Выйти
-                        </Button>
-                    </Nav>
-                    :
-                    <Nav className="ml-auto" style={{color: 'white'}}>
-                        <Button variant={"outline-light"} onClick={() => history.push(LOGIN_ROUTE)}>Авторизация</Button>
-                    </Nav>
-                }
+                <Row className="w-100 justify-content-between align-items-center">
+                    <Col lg={3}>
+                        <NavLink to={SHOP_ROUTE}>
+                            <img src={logo}></img>
+                        </NavLink>
+                    </Col>
+                    <Col lg={7}>
+                        <Nav className="justify-content-around align-items-center">
+                            <Nav.Item as="li" className="header-nav-item"><Nav.Link className="header-nav-link" href="#">Шмотки</Nav.Link></Nav.Item>
+                            <Nav.Item as="li" className="header-nav-item"><Nav.Link className="header-nav-link" href="#">Благотворительность</Nav.Link></Nav.Item>
+                            <Nav.Item as="li" className="header-nav-item"><Nav.Link className="header-nav-link" href="#">Про нас</Nav.Link></Nav.Item>
+                        </Nav>
+                    </Col>
+                </Row>
             </Container>
+
+            <Nav className="hamburger-menu">
+                <input id="menu-toggle" type="checkbox"/>
+                <label className="menu-btn" htmlFor="menu-toggle">
+                    <span></span>
+                </label>
+                <Nav as="ul" className="menu-box">
+                    <div className="d-flex flex-column justify-content-around align-items-center">
+                        <Nav.Item as="li" className="menu-item"><Nav.Link className="menu-item-1" href="#">Шмотки</Nav.Link></Nav.Item>
+                        <Nav.Item as="li" className="menu-item"><Nav.Link className="menu-item-2" href="#">Благотворительность</Nav.Link></Nav.Item>
+                        <Nav.Item as="li" className="menu-item"><Nav.Link className="menu-item-3" href="#">Про нас</Nav.Link></Nav.Item>
+                    </div>
+                </Nav>
+            </Nav>
         </Navbar>
+
     );
 };
 
