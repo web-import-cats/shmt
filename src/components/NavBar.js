@@ -34,9 +34,9 @@ const NavBar = () => {
                 </label>
                 <Nav as="ul" className="menu-box">
                     <div className="d-flex flex-column justify-content-around align-items-center">
-                        <Nav.Item as="li" className="menu-item"><Nav.Link className="menu-item-1" href="#">Шмотки</Nav.Link></Nav.Item>
-                        <Nav.Item as="li" className="menu-item"><Nav.Link className="menu-item-2" href="#">Благотворительность</Nav.Link></Nav.Item>
-                        <Nav.Item as="li" className="menu-item"><Nav.Link className="menu-item-3" href="#">Про нас</Nav.Link></Nav.Item>
+                        <Nav.Item as="li" className="menu-item"><Nav.Link className="menu-item-1 header-nav-item" href="#">Шмотки</Nav.Link></Nav.Item>
+                        <Nav.Item as="li" className="menu-item"><Nav.Link className="menu-item-2 header-nav-item" href="#">Благотворительность</Nav.Link></Nav.Item>
+                        <Nav.Item as="li" className="menu-item"><Nav.Link className="menu-item-3 header-nav-item" href="#">Про нас</Nav.Link></Nav.Item>
                     </div>
                 </Nav>
             </Nav>
