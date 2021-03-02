@@ -15,6 +15,7 @@
 
   &:after{
     @include hoverLink;
+    width: 100%;
   }
 
   &:first-child:after{
@@ -92,6 +93,10 @@
         transition: background 0.3s linear;
       }
 
+      .menu-item-1, .menu-item-2, .menu-item-3{
+        width: 50%;
+        margin: 0 auto;
+      }
       .menu-item-1:after{
         background-color: $light-purple;
       }
