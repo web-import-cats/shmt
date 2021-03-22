@@ -1,11 +1,17 @@
 @import 'fonts';
 @import 'vars';
 @import 'navbar';
+@import 'footer';
 
 li{
     list-style: none;
 }
 
 body {
+    padding-top: 77px;
     background-color: #e2e2e2;
+}
+
+#root {
+    min-height: calc(100vh - 77px);
 }
