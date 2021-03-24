@@ -13,15 +13,15 @@ const NavBar = () => {
             <Container>
                 <Row className="w-100 justify-content-between align-items-center">
                     <Col lg={3}>
-                        <NavLink to={SHOP_ROUTE}>
+                        <NavLink href={SHOP_ROUTE}>
                             <img src={logo}></img>
                         </NavLink>
                     </Col>
                     <Col lg={7}>
                         <Nav className="justify-content-around align-items-center">
-                            <Nav.Item as="li" className="header-nav-item"><Nav.Link className="header-nav-link" href="#">Шмотки</Nav.Link></Nav.Item>
-                            <Nav.Item as="li" className="header-nav-item"><Nav.Link className="header-nav-link" href="#">Благотворительность</Nav.Link></Nav.Item>
-                            <Nav.Item as="li" className="header-nav-item"><Nav.Link className="header-nav-link" href="#">Про нас</Nav.Link></Nav.Item>
+                            <Nav.Item as="li" className="header-nav-item"><Nav.Link className="header-nav-link" href="login">Login</Nav.Link></Nav.Item>
+                            <Nav.Item as="li" className="header-nav-item"><Nav.Link className="header-nav-link" href="free">Благотворительность</Nav.Link></Nav.Item>
+                            <Nav.Item as="li" className="header-nav-item"><Nav.Link className="header-nav-link" href="about">Про нас</Nav.Link></Nav.Item>
                         </Nav>
                     </Col>
                 </Row>
