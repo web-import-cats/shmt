@@ -1,5 +1,6 @@
 import Admin from "./pages/Admin";
-import {ADMIN_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHMOTKA_ROUTE, SHOP_ROUTE} from "./utils/consts";
+import Home from "./pages/Home";
+import {HOME_ROUTE,ADMIN_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHMOTKA_ROUTE, SHOP_ROUTE} from "./utils/consts";
 import Shop from "./pages/Shop";
 import Auth from "./pages/Auth";
 import ShmotkaPage from "./pages/ShmotkaPage";
@@ -12,6 +13,10 @@ export const authRoutes = [
 ];
 
 export const publicRoutes = [
+    {
+        path: HOME_ROUTE,
+        Component: Home
+    },
     {
         path: SHOP_ROUTE,
         Component: Shop
