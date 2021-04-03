@@ -3,18 +3,32 @@
   position: relative;
   background: url("../img/Background.png") no-repeat center;
   background-size: cover;
-
-  .main-page-window{
-    padding: 40px 0;
+  
+  @media (max-width: 767px) {
+    height: 110vh;
   }
 
-  .main-page-button{
-    @include button(#111, #fff);
-    @include cera-pro(24px, 700, center, #fff);
-    @include transition-for-button;
+  .main-page-Image{
+  }
 
-    &:hover{
-      transform: translate3d(0,-15px,0);
+  .main-page-right {
+
+    .main-page-window {
+      padding-bottom: 40px;
+    }
+
+    .main-page-button{
+      @include button(#111, #fff);
+      @include cera-pro(24px, 700, center, #fff);
+      @include transition-for-button;
+
+      @media (max-width: 991px) {
+        @include cera-pro(20px, 700, center, #fff);
+      }
+
+      &:hover{
+        transform: translate3d(0,-15px,0);
+      }
     }
   }
 }
