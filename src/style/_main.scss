@@ -1,3 +1,18 @@
 #main-page{
-  height: 100vh;
+  height: 90vh;
+  position: relative;
+
+  .main-page-window{
+    padding: 40px 0;
+  }
+
+  .main-page-button{
+    @include button(#111, #fff);
+    @include cera-pro(24px, 700, center, #fff);
+    @include transition-for-button;
+
+    &:hover{
+      transform: translate3d(0,-15px,0);
+    }
+  }
 }

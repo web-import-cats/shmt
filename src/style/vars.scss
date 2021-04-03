@@ -2,27 +2,54 @@ $light-purple: #E4C9F5;
 $light-pink: #FFD0E3;
 $dark-pink: #E9ABC4;
 
-@mixin cera-pro ($font-size:18px, $font-weight:400, $text-align:center, $black-color: #111111 ){
+@mixin cera-pro ($font-size:18px, $font-weight:400, $text-align:center, $color: #111111 ){
   font-size: $font-size;
   font-weight: $font-weight;
   text-align: $text-align;
-  color: $black-color;
+  color: $color;
 
   font-style: normal;
   letter-spacing: 1px;
+  transition: color 0.2s linear;
 }
 
-@mixin hoverLink {
-  content: '';
-  height: 7px;
-  display: block;
+@mixin underline($color:$light-purple){
+  content: "";
   opacity: 0;
-  position: absolute;
   width: 100%;
-  top: 65%;
+  height: 8px;
+  background-color: $color;
+
+  position: absolute;
   left: 0;
-  right: 0;
-  z-index: 3;
-  text-align: center;
+  bottom: 9px;
+  z-index: -1;
+
   transition: opacity 0.3s linear;
+}
+
+@mixin thin-underline{
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #111111;
+
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+
+  transition: opacity 0.3s linear;
+}
+
+@mixin button($bac-color: #111, $text-color: #fff){
+  background-color: $bac-color;
+  color: $text-color;
+  border: none;
+
+  padding: 16px 20px;
+}
+
+@mixin transition-for-button{
+  transition: transform 0.3s linear;
 }
