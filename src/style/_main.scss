@@ -1,33 +1,66 @@
 #main-page{
   height: 90vh;
+  width: 100%;
   position: relative;
   background: url("../img/Background.png") no-repeat center;
   background-size: cover;
-  
-  @media (max-width: 767px) {
-    height: 110vh;
-  }
 
-  .main-page-Image{
-  }
+  .main-page-wrap{
 
-  .main-page-right {
-
-    .main-page-window {
-      padding-bottom: 40px;
+    @media (max-width: 767px) {
+      padding-top: 50px;
     }
 
-    .main-page-button{
-      @include button(#111, #fff);
-      @include cera-pro(24px, 700, center, #fff);
-      @include transition-for-button;
 
+    .main-page-Image{
+      width: 45%;
       @media (max-width: 991px) {
-        @include cera-pro(20px, 700, center, #fff);
+        width: 50%;
+      }
+      @media (max-width: 767px) {
+        width: 60%;
+        position: relative;
+      }
+      @media (max-width: 425px) {
+        width: 80%;
+      }
+    }
+
+    .main-page-right {
+      @media (max-width: 767px) {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 50px;
       }
 
-      &:hover{
-        transform: translate3d(0,-15px,0);
+      .main-page-window {
+        width: 90%;
+        padding-bottom: 40px;
+
+        @media (max-width: 767px) {
+          width: 70%;
+        }
+        @media (max-width: 425px) {
+          width: 80%;
+        }
+      }
+
+      .main-page-button{
+        @include button(#111, #fff);
+        @include cera-pro(24px, 700, center, #fff);
+        @include transition-for-button;
+
+        @media (max-width: 991px) {
+          @include cera-pro(20px, 700, center, #fff);
+        }
+
+        @media (max-width: 767px) {
+          @include cera-pro(18px, 700, center, #fff);
+        }
+
+        @media (max-width: 425px) {
+          @include cera-pro(16px, 700, center, #fff);
+        }
       }
     }
   }

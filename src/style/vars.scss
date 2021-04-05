@@ -48,6 +48,10 @@ $dark-pink: #E9ABC4;
   border: none;
 
   padding: 16px 20px;
+
+  &:hover{
+    transform: translate3d(0,-15px,0);
+  }
 }
 
 @mixin transition-for-button{
