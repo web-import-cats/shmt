@@ -1,0 +1,68 @@
+#main-page{
+  height: 90vh;
+  position: relative;
+  background: url("../img/Background.png") no-repeat center;
+  background-size: cover;
+
+  .main-page-wrap{
+    width: 100%;
+
+    @media (max-width: 767px) {
+      padding-top: 50px;
+    }
+
+
+    .main-page-Image{
+      width: 45%;
+      @media (max-width: 991px) {
+        width: 50%;
+      }
+      @media (max-width: 767px) {
+        position: relative;
+        width: 80%;
+      }
+    }
+
+    .main-page-right {
+
+      @media (max-width: 767px) {
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+        padding-bottom: 50px;
+      }
+
+      @media (max-width: 575px) {
+        right: 15px;
+      }
+
+      .main-page-window {
+        width: 90%;
+        padding-bottom: 40px;
+
+        @media (max-width: 767px) {
+          width: 80%;
+        }
+      }
+
+      .main-page-button{
+        @include button(#111, #fff);
+        @include cera-pro(24px, 700, center, #fff);
+        @include transition-for-button;
+        float: right;
+
+        @media (max-width: 991px) {
+          @include cera-pro(20px, 700, center, #fff);
+        }
+
+        @media (max-width: 767px) {
+          @include cera-pro(18px, 700, center, #fff);
+        }
+
+        @media (max-width: 425px) {
+          @include cera-pro(16px, 700, center, #fff);
+        }
+      }
+    }
+  }
+}

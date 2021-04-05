@@ -1,0 +1,41 @@
+#about{
+  background-color: #ffffff;
+  height: 90vh;
+
+  @media (max-width: 991px) {
+    height: 100vh;
+  }
+
+  & img{
+    
+  }
+
+  .container-fluid{
+    padding: 0;
+  }
+
+  .col-lg-6{
+    padding: 0!important;
+  }
+}
+
+.about-info{
+  padding: 30px;
+
+  .about-info-caption{
+    @include cera-pro(32px, 700, start, #111);
+    padding: 30px 0;
+
+    @media (max-width: 991px) {
+      margin: 0 auto;
+    }
+  }
+
+  .about-info-text{
+    @include cera-pro(22px, 400, start, #111);
+
+    @media (max-width: 991px) {
+      @include cera-pro(22px, 400, center, #111);
+    }
+  }
+}
