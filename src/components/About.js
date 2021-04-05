@@ -10,7 +10,6 @@ const About = () => {
                     <Col lg={6}>
                         <div className="about-info">
                             <div className="d-flex flex-column justify-content-center align-items-md-start ">
-                            <div className="d-flex flex-column justify-content-center align-items-start">
                                 <h2 className="about-info-caption">О нас</h2>
                                 <p className="about-info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper, nibh accumsan lobortis pellentesque, risus magna sagittis diam, nec bibendum tortor quam ut nunc. Aliquam dictum malesuada tortor ac aliquet. Praesent sed euismod nulla..</p>
                             </div>
