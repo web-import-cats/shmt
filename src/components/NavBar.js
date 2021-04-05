@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
 import { createBrowserHistory } from 'history';
 import {Context} from "../index";
-import {Col, Row, Container, Nav, Navbar, NavLink} from "react-bootstrap";
-import {HOME_ROUTE, SHOP_ROUTE} from "../utils/consts";
+import {Nav} from "react-bootstrap";
+
 let history = createBrowserHistory();
 
 const NavBar = () => {

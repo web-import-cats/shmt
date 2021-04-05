@@ -1,0 +1,38 @@
+#about{
+  background-color: #ffffff;
+  height: 60vh;
+
+  @media (max-width: 991px) {
+    height: 100vh;
+  }
+
+  & img{
+    height: 442px;
+
+    @media (max-width: 575px) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .container-fluid{
+    padding: 0;
+  }
+
+  .col-lg-6{
+    padding: 0!important;
+  }
+}
+
+.about-info{
+  padding: 0 30px;
+
+  .about-info-caption{
+    @include cera-pro(32px, 700, start, #111);
+    padding: 10px 0;
+  }
+
+  .about-info-text{
+    @include cera-pro(22px, 400, start, #111);
+  }
+}
