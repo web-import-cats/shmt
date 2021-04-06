@@ -57,3 +57,21 @@ $dark-pink: #E9ABC4;
 @mixin transition-for-button{
   transition: transform 0.3s linear;
 }
+
+@mixin flex-for-text($aligh-align: start){
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: $aligh-align;
+  padding: 0 30px;
+
+  @media (max-width: 991px) {
+    padding: 30px 50px;
+  }
+}
+
+@mixin flex-for-img{
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
