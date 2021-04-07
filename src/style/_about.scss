@@ -1,10 +1,6 @@
 #about{
   background-color: #ffffff;
-  height: 700px;
-
-  @media (max-width: 991px) {
-    height: 900px;
-  }
+  height: 100%;
 }
 
 .about-info{
@@ -14,7 +10,6 @@
 
   @media (max-width: 991px) {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(9,100px);
   }
 
   .about-info-caption{
@@ -32,8 +27,6 @@
       @include display-flex(column, center, center);
 
       grid-column-end: 3;
-      grid-row-start: 1;
-      grid-row-end: 2;
     }
   }
 
@@ -51,16 +44,13 @@
     @media (max-width: 991px) {
       @include display-flex;
       grid-column-end: 3;
-      grid-row-start: 7;
-      grid-row-end: 10;
+      grid-row-start: 6;
 
       padding: 0 50px;
     }
 
     @media (max-width: 425px) {
       @include cera-pro(20px,400, start, #111);
-      grid-row-start: 6;
-      grid-row-end: 10;
     }
   }
 
@@ -72,8 +62,8 @@
       @media (max-width: 991px) {
         @include flex-for-img;
       }
-
-      @media (max-width: 512px) {
+      
+      @media (max-width: 425px) {
         width: 100%;
         height: auto;
       }
@@ -87,7 +77,7 @@
     @media (max-width: 991px) {
       grid-column-start: 1;
       grid-row-start: 2;
-      grid-row-end: 7;
+      grid-row-end: 6;
     }
 
     @media (max-width: 425px) {
