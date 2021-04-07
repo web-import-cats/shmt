@@ -10,7 +10,7 @@ const SearchShmot = () => {
         <div id="search-shmot">
             <Container>
                 <div class="h-100 d-flex flex-column align-items-center">
-                    <h2 class="search-shmot-caption">НАЧНЁМ ИСКАТЬ ШМОТ?</h2>
+                    <h2 class="search-shmot-caption caption">НАЧНЁМ ИСКАТЬ ШМОТ?</h2>
                     <div class="search-shmot-bottom">
                         <div class="h-100 d-flex flex-lg-row flex-column justify-content-lg-around justify-content-start align-items-lg-start align-items-center">
                                 <div class="search-shmot-watch">

@@ -5,6 +5,7 @@
 @import '_main';
 @import "_about";
 @import "_searchshmot";
+@import "_features";
 
 h1, h2, h3, h4, h5, h6{
     margin: 0;
@@ -29,4 +30,24 @@ button{
 }
 .container{
     height: 100%;
+}
+
+.caption{
+    @include cera-pro(32px, 700, start, #111);
+
+    @media(max-width: 991px){
+        @include cera-pro(32px, 700, center, #111);
+    }
+
+    @media(max-width: 425px){
+        @include cera-pro(26px, 700, center, #111);
+    }
+}
+
+.text{
+    @include cera-pro(22px, 400, start, #111);
+
+    @media (max-width: 425px) {
+        @include cera-pro(20px,400, start, #111);
+    }
 }

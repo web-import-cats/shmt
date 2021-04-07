@@ -1,20 +1,14 @@
 #search-shmot{
   background-color: $light-pink;
   height: 100%;
-  padding: 50px 0;
-
-  @media (max-width: 991px){
-    padding: 0 20px
-  }
+  @include page-padding;
 }
 
 .search-shmot-caption{
   padding: 50px 0;
-  @include cera-pro(32px, 700, center, #111);
 
   @media (max-width: 991px){
     padding: 40px 0;
-    @include cera-pro(28px, 700, center, #111);
   }
 }
 
@@ -78,7 +72,7 @@
       right: 0;
 
       @include button-link($blue, #fff);
-      padding: 15px 47px;
+      padding: 15px 35px;
       @include transition-for-links;
 
       @media (max-width: 991px){

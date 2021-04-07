@@ -2,9 +2,11 @@ $light-purple: #E4C9F5;
 $light-pink: #FFD0E3;
 $dark-pink: #E9ABC4;
 $blue: #A7BCCC;
+$green: #BCD5CA;
+$beige: #E8DCD2;
 
 
-@mixin cera-pro ($font-size:18px, $font-weight:400, $text-align:center, $color: #111111 ){
+@mixin cera-pro ($font-size: 18px, $font-weight: 400, $text-align: center, $color: #111111 ){
   font-size: $font-size;
   font-weight: $font-weight;
   text-align: $text-align;
@@ -64,9 +66,10 @@ $blue: #A7BCCC;
   justify-content: $justify-col-content;
 }
 
-@mixin flex-for-img{
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-}
+@mixin page-padding{
+  padding: 50px 0;
 
+  @media (max-width: 991px){
+    padding: 0 20px
+  }
+}
