@@ -49,6 +49,12 @@
       grid-row-start: 7;
       grid-row-end: 10;
     }
+
+    @media (max-width: 425px) {
+      @include cera-pro(20px,400, start, #111);
+      grid-row-start: 6;
+      grid-row-end: 10;
+    }
   }
 
   .about-info-img{
@@ -58,6 +64,11 @@
 
       @media (max-width: 991px) {
         @include flex-for-img;
+      }
+
+      @media (max-width: 512px) {
+        width: 100%;
+        height: auto;
       }
     }
 
@@ -70,6 +81,12 @@
       grid-column-start: 1;
       grid-row-start: 2;
       grid-row-end: 7;
+    }
+
+    @media (max-width: 425px) {
+      grid-column-start: 1;
+      grid-row-start: 2;
+      grid-row-end: 6;
     }
   }
 }
