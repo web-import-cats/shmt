@@ -46,21 +46,15 @@
       }
 
       .main-page-button{
-        @include button(#111, #fff);
+        @include button-link(#111, #fff);
         @include cera-pro(24px, 700, center, #fff);
-        @include transition-for-button;
+        @include transition-for-links;
+
+        padding: 16px 20px;
+        text-decoration: none;
         float: right;
 
-        @media (max-width: 991px) {
-          @include cera-pro(20px, 700, center, #fff);
-        }
-
-        @media (max-width: 767px) {
-          @include cera-pro(18px, 700, center, #fff);
-        }
-
-        @media (max-width: 425px) {
-          @include cera-pro(16px, 700, center, #fff);
+        & a{
         }
       }
     }

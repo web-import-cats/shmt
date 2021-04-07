@@ -9,7 +9,7 @@ const About = () => {
                     <h2>О нас</h2>
                 </div>
                 <div className="about-info-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper, nibh accumsan lobortis pellentesque, risus magna sagittis diam, nec bibendum tortor quam ut nunc. Aliquam dictum malesuada tortor ac aliquet. Praesent sed euismod nulla..</p>
+                    <p>For text</p>
                 </div>
                 <div className="about-info-img">
                     <img src={AboutImg}></img>

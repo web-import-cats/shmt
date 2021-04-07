@@ -1,6 +1,8 @@
 $light-purple: #E4C9F5;
 $light-pink: #FFD0E3;
 $dark-pink: #E9ABC4;
+$blue: #A7BCCC;
+
 
 @mixin cera-pro ($font-size:18px, $font-weight:400, $text-align:center, $color: #111111 ){
   font-size: $font-size;
@@ -42,32 +44,24 @@ $dark-pink: #E9ABC4;
   transition: opacity 0.3s linear;
 }
 
-@mixin button($bac-color: #111, $text-color: #fff){
+@mixin button-link($bac-color: #111, $text-color: #fff){
   background-color: $bac-color;
   color: $text-color;
-  border: none;
-
-  padding: 16px 20px;
 
   &:hover{
     transform: translate3d(0,-15px,0);
   }
 }
 
-@mixin transition-for-button{
+@mixin transition-for-links{
   transition: transform 0.3s linear;
 }
 
-@mixin flex-for-text($justify-content:center, $aligh-align: start){
+@mixin display-flex ($flex-direction: column, $align-col-items: flex-start, $justify-col-content: center){
   display: flex;
-  flex-direction: column;
-  justify-content: $justify-content;
-  align-items: $aligh-align;
-  padding: 0 30px;
-
-  @media (max-width: 991px) {
-    padding: 0 50px;
-  }
+  flex-direction: $flex-direction;
+  align-items: $align-col-items;
+  justify-content: $justify-col-content;
 }
 
 @mixin flex-for-img{
@@ -75,3 +69,4 @@ $dark-pink: #E9ABC4;
   align-items: center;
   margin: 0 auto;
 }
+

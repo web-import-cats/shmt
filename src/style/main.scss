@@ -4,7 +4,11 @@
 @import 'footer';
 @import '_main';
 @import "_about";
+@import "_searchshmot";
 
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
 li{
     list-style: none;
 }

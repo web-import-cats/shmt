@@ -1,0 +1,100 @@
+#search-shmot{
+  background-color: $light-pink;
+  height: 100%;
+  padding: 50px 0;
+
+  @media (max-width: 991px){
+    padding: 0 20px
+  }
+}
+
+.search-shmot-caption{
+  padding: 50px 0;
+  @include cera-pro(32px, 700, center, #111);
+
+  @media (max-width: 991px){
+    padding: 40px 0;
+    @include cera-pro(28px, 700, center, #111);
+  }
+}
+
+.search-shmot-bottom{
+  width: 100%;
+  padding: 50px 0;
+
+  @media (max-width: 991px){
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  & img{
+    width: 90%;
+    height: auto;
+  }
+
+  .search-shmot-watch{
+    position: relative;
+    @include display-flex(row, center, space-between);
+
+    @media (max-width: 991px){
+      padding-bottom: 40px;
+    }
+
+    .search-shmot-watch-button{
+      position: absolute;
+      top: 40%;
+      right: 0;
+
+      @include button-link($dark-pink, #fff);
+      padding: 15px 47px;
+      @include transition-for-links;
+
+      @media (max-width: 991px){
+        top: 35%;
+      }
+
+      & a{
+        @include cera-pro(24px, 700, center, #fff);
+        text-decoration: none;
+
+        @media (max-width: 425px){
+          @include cera-pro(20px, 700, center, #fff);
+        }
+      }
+    }
+  }
+
+  .search-shmot-regist {
+    position: relative;
+    @include display-flex(row, center, space-between);
+
+    @media (max-width: 991px){
+      flex-direction: row-reverse;
+    }
+
+    .search-shmot-regist-button{
+      position: absolute;
+      top: 40%;
+      right: 0;
+
+      @include button-link($blue, #fff);
+      padding: 15px 47px;
+      @include transition-for-links;
+
+      @media (max-width: 991px){
+        top: 35%;
+        left: 0;
+        right: auto;
+      }
+
+      & a{
+        @include cera-pro(24px, 700, center, #fff);
+        text-decoration: none;
+
+        @media (max-width: 425px){
+          @include cera-pro(20px, 700, center, #fff);
+        }
+      }
+    }
+  }
+}

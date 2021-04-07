@@ -19,15 +19,17 @@
 
   .about-info-caption{
     @include cera-pro(32px, 700, start, #111);
-    @include flex-for-text;
+    @include display-flex;
 
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
 
+    padding: 0 70px;
+
     @media (max-width: 991px) {
-      margin: 0 auto;
+      @include display-flex(column, center, center);
 
       grid-column-end: 3;
       grid-row-start: 1;
@@ -37,17 +39,22 @@
 
   .about-info-text{
     @include cera-pro(22px, 400, start, #111);
-    @include flex-for-text;
+    @include display-flex(column, flex-start, flex-start);
 
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 8;
 
+    padding: 0 70px;
+
     @media (max-width: 991px) {
+      @include display-flex;
       grid-column-end: 3;
       grid-row-start: 7;
       grid-row-end: 10;
+
+      padding: 0 50px;
     }
 
     @media (max-width: 425px) {

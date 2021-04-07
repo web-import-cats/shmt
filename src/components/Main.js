@@ -2,6 +2,7 @@ import React from "react";
 import {Container} from "react-bootstrap";
 import Image from "../img/Image-main-page.png";
 import Window from "../img/Windows-main-page.png";
+import {SHOP_ROUTE} from "../utils/consts";
 
 function Main() {
     return (
@@ -14,7 +15,7 @@ function Main() {
                             <div className="main-page-right">
                                 <div className="d-flex flex-column justify-content-center align-items-end">
                                     <img src={Window} className="main-page-window"></img>
-                                    <button className="main-page-button">Просмотр шмоток</button>
+                                    <a className="main-page-button" href={SHOP_ROUTE}>Просмотр шмоток</a>
                                 </div>
                             </div>
                         </div>
