@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import {HOME_ROUTE, ADMIN_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHMOTKA_ROUTE, SHOP_ROUTE} from "./utils/consts";
 import Shop from "./pages/Shop";
 import Auth from "./pages/Auth";
+import Register from "./pages/Register";
 import ShmotkaPage from "./pages/ShmotkaPage";
 
 export const authRoutes = [
@@ -27,7 +28,7 @@ export const publicRoutes = [
     },
     {
         path: REGISTRATION_ROUTE,
-        Component: Auth
+        Component: Register
     },
     {
         path: SHMOTKA_ROUTE + '/:id',
