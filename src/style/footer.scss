@@ -1,0 +1,33 @@
+#footer-wrap{
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 35px 0;
+}
+
+.footer-text{
+  @include cera-pro(16px, 700, center, #111);
+  text-transform: uppercase;
+}
+
+.footer-social-network{
+  padding-top: 20px;
+
+  & a{
+    padding: 0 10px;
+    @include transition-for-links;
+
+    &:hover{
+      transform: translate3d(0,-5px, 0);
+    }
+
+    & img{
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 991px){
+    padding-top: 0;
+    padding-bottom: 15px;
+  }
+}
