@@ -1,0 +1,33 @@
+#login-page{
+  height: 90vh;
+  background-color: #fff;
+
+  .auth-caption{
+    @include cera-pro(32px, 700, center, #111);
+    padding-bottom: 40px;
+  }
+
+  .auth-form-wrap{
+
+    .auth-form-input{
+      @include cera-pro(24px, 400, start, $gray);
+      @include input-style;
+      background-color: transparent;
+
+      &:first-child{
+        margin-bottom: 20px;
+      }
+    }
+
+    .auth-form-button{
+      margin-top: 40px;
+      @include cera-pro(24px, 700, center, #fff);
+      @include button-link( #3C7AFC, #fff );
+      @include transition-for-links;
+
+      border: none;
+      width: 260px;
+      height: 60px;
+    }
+  }
+}

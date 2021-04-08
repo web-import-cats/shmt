@@ -4,6 +4,7 @@ $dark-pink: #E9ABC4;
 $blue: #A7BCCC;
 $green: #BCD5CA;
 $beige: #E8DCD2;
+$gray: rgba(0, 0, 0, 0.5);
 
 
 @mixin cera-pro ($font-size: 18px, $font-weight: 400, $text-align: center, $color: #111111 ){
@@ -72,5 +73,17 @@ $beige: #E8DCD2;
 
   @media (max-width: 991px){
     padding: 0 20px
+  }
+}
+
+@mixin input-style($width: 310px, $height: 55px){
+  border: 2px solid #111;
+  padding-left: 10px;
+
+  width: $width;
+  height: $height;
+
+  &:focus{
+    outline: none;
   }
 }
