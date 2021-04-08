@@ -17,19 +17,19 @@ const NavBar = () => {
                 <Nav.Item as="li" className="header-nav-item"><Nav.Link className="header-nav-link login-link" href="login">Войти</Nav.Link></Nav.Item>
             </Nav>
         </div>
-        <div class="hamburger-menu">
-            <input id="menu__toggle" type="checkbox" />
-            <label class="menu__btn" for="menu__toggle"><span></span></label>
 
-            <Nav as="ul" class="menu__box">
-                <Nav.Item as="li"><Nav.Link class="menu__item" href="#">Главная</Nav.Link></Nav.Item>
-                <Nav.Item as="li"><Nav.Link class="menu__item" href="#">Проекты</Nav.Link></Nav.Item>
-                <Nav.Item as="li"><Nav.Link class="menu__item" href="#">Команда</Nav.Link></Nav.Item>
-                <Nav.Item as="li"><Nav.Link class="menu__item" href="#">Блог</Nav.Link></Nav.Item>
-                <Nav.Item as="li"><Nav.Link class="menu__item" href="#">Контакты</Nav.Link></Nav.Item>
-            </Nav>
-        </div>
-        </div>
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle"><span></span></label>
+
+        <Nav as="ul" class="menu__box">
+            <Nav.Item as="li"><Nav.Link class="menu__item" href="#">Шмотки</Nav.Link></Nav.Item>
+            <Nav.Item as="li"><Nav.Link class="menu__item" href="#">Благотворительность</Nav.Link></Nav.Item>
+            <Nav.Item as="li"><Nav.Link class="menu__item" href="#">Про нас</Nav.Link></Nav.Item>
+            <Nav.Item as="li"><Nav.Link class="menu__item" href="#">Войти</Nav.Link></Nav.Item>
+        </Nav>
+    </div>
+    </div>
 );
 };
 
