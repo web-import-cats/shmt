@@ -44,84 +44,125 @@
   }
 }
 
-.hamburger-menu {
+.hamburger-menu{
   display: none;
-
-  position: absolute;
-  right: 0;
-  bottom: 50%;
 
   @media (max-width: 991px){
     display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
   }
+}
 
-  #menu__toggle {
-    opacity: 0;
+#menu__toggle {
+  opacity: 0;
 
-    &:checked{
-      & ~ .menu__box {
-        visibility: visible;
-        right: 0;
+  &:checked{
+    & ~ .menu__btn > span{
+      transform: rotate(45deg);
+
+      &:before {
+        top: 0;
+        transform: rotate(0);
       }
 
-      & ~ .menu__btn > span {
-        transform: rotate(45deg);
-
-        &:before{
-          top: 0;
-          transform: rotate(0);
-        }
-
-        &:after {
-          top: 0;
-          transform: rotate(90deg);
-        }
+      &:after {
+        top: 0;
+        transform: rotate(90deg);
       }
     }
+
+    & ~ .menu__box{
+      visibility: visible;
+      left: 0;
+    }
   }
+}
 
-  .menu__btn {
-    display: flex;
-    align-items: center;
+.menu__btn {
+  display: flex;
+  align-items: center;
 
-    position: absolute;
-    bottom: 50%;
-    right: 0;
-    z-index: 1;
+  position: fixed;
+  right: 30px;
+  top: 37px;
+  z-index: 1;
 
-    width: 50px;
-    cursor: pointer;
-  }
+  width: 50px;
+  cursor: pointer;
 
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
-    display: block;
-    position: absolute;
+  & > span{
 
-    width: 100%;
-    height: 4px;
-
-    background-color: #111;
-
-    transition-duration: .25s;
-  }
-
-  .menu__btn > span{
-    &:before {
+    &:before{
       content: '';
       top: -12px;
     }
-    &:after {
+
+    &:after{
       content: '';
       top: 12px;
     }
   }
+}
 
-  .menu__box {
-    visibility: hidden;
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #111111;
+  transition-duration: .25s;
+}
 
-    position: absolute;
-    top: 41px;
+.menu__box {
+ @include display-flex(column, center, flex-start);
+
+  position: fixed;
+  visibility: hidden;
+  background: url("../img/Background.png") no-repeat center;
+
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  margin: 75px 0;
+
+  transition-duration: .25s;
+
+  .menu__li {
+    width: 90%;
+    margin-top: 30px;
+
+    &:first-child{
+      background-color: $light-purple;
+    }
+
+    &:nth-child(2){
+      background-color: $light-pink;
+    }
+
+    &:nth-child(3){
+      background-color: $dark-pink;
+    }
+
+    &:last-child{
+      background-color: $light-gray;
+    }
+
+    .menu__item {
+      transition-duration: .25s;
+      transition: background 0.2s linear;
+      padding: 20px 0;
+      @include cera-pro(24px, 400, center, #111111);
+
+      &:hover{
+        border: 2px #111111 solid;
+        background: #ffffff;
+        transition: background 0.2s linear;
+      }
+    }
   }
 }

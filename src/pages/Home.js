@@ -19,7 +19,10 @@ const Home = () => {
             <About/>
             <SearchShmot/>
             <Features/>
+<<<<<<< Updated upstream
             <!-- try API github -->
+=======
+>>>>>>> Stashed changes
             <div className="App">
                 <header className="App-header">
                     <p>
@@ -27,7 +30,10 @@ const Home = () => {
                     </p>
                 </header>
             </div>
+<<<<<<< Updated upstream
             <!-- end of try API github -->
+=======
+>>>>>>> Stashed changes
         </div>
 );
 };
